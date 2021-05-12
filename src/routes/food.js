@@ -19,7 +19,7 @@ function checkingEndPoint(req, res, next){
     newModels= newClothesInst;
   }
   next();
-} 
+}
 
 //add router
 router.get('/',getModel);
@@ -29,13 +29,20 @@ router.put('/:id',updatModel);
 router.delete('/:id',deletModel);
 
 //function
+
+//using then
 function getModel(req,res){
   let getAll = newModels.get().then(result=>{
     res.status(200).json(result);
   });
-
-
 }
+
+
+//using async
+// async function getModel(req,res){
+//   let getAll =await newModels.get()
+//     res.status(200).json(getAll);
+// }
 
 function getOneMode(req,res){
   const id=req.params.id;
@@ -47,10 +54,10 @@ function getOneMode(req,res){
 
 function createModel(req,res){
   let obj = req.body;
-  newModels.create(obj).then(result=>{
-    res.status(201).json(result);
-  }
-  );
+  let newModel =newModels.create(obj).then(e=>{
+
+    res.status(201).json(e);
+  });
 
 }
 function updatModel(req,res){
