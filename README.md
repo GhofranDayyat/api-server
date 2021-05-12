@@ -1,6 +1,6 @@
 # api-server
 
-*  [PR](https://github.com/GhofranDayyat/basic-api-server/pull/4)
+*  [PR](https://github.com/GhofranDayyat/api-server/pull/3)
 * [Herokue deploy link](https://basic-api-server-gh.herokuapp.com/)
 * [GitHub Action](https://github.com/GhofranDayyat/api-server/actions)
 
